@@ -1,0 +1,2 @@
+Node & Express weather application
+integrated accuweather api

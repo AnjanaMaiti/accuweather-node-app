@@ -1,0 +1,25 @@
+ <%= area %>
+
+
+ Weather: <%= data.WeatherText  %>
+
+ Precipitation: <%= data.PrecipitationType  %>
+
+ Temperature: <%= data.Temperature.Metric.Value  %>&#176;<%= data.Temperature.Metric.Unit  %> / <%= data.Temperature.Imperial.Value  %>&#176;<%= data.Temperature.Imperial.Unit  %>
+ 
+ Real Feel Temperature: <%= data.RealFeelTemperature.Metric.Value  %>&#176;<%= data.RealFeelTemperature.Metric.Unit  %> / <%= data.RealFeelTemperature.Imperial.Value  %>&#176;<%= data.RealFeelTemperature.Imperial.Unit  %>
+
+ Relative Humidity: <%= data.RelativeHumidity  %>
+
+ DewPoint: <%= data.DewPoint.Metric.Value  %>&#176;<%= data.DewPoint.Metric.Unit  %> / <%= data.DewPoint.Imperial.Value  %>&#176;<%= data.DewPoint.Imperial.Unit  %>
+
+ Wind Direction: <%= data.Wind.Direction.Degrees  %> <%= data.Wind.Direction.Localized  %> 
+
+ Wind Speed: <%= data.Wind.Speed.Metric.Value  %>&#176;<%= data.Wind.Speed.Metric.Unit  %> / <%= data.Wind.Speed.Imperial.Value  %>&#176;<%= data.Wind.Speed.Imperial.Unit  %>
+
+ Wind Chill Temperature: <%= data.WindChillTemperature.Metric.Value  %>&#176;<%= data.WindChillTemperature.Metric.Unit  %> / <%= data.WindChillTemperature.Imperial.Value  %>&#176;<%= data.WindChillTemperature.Imperial.Unit  %>
+
+ UVIndex: <%= data.UVIndex %> <%= data.UVIndexText %>
+
+ Visibility: <%= data.Visibility.Metric.Value  %>&#176;<%= data.Visibility.Metric.Unit  %> / <%= data.Visibility.Imperial.Value  %>&#176;<%= data.Visibility.Imperial.Unit  %>
+ 

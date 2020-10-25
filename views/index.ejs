@@ -1,0 +1,26 @@
+<h1>Accuweather page</h1>
+
+<!-- <h1>Hello <%= flag %></h1> -->
+
+<% if(flag==false) {%>
+<form action="/" method="POST">
+    <div>
+        Enter Pincode: <input type="text" id="pincode" name="pincode" maxlength="10" autocomplete="off" required> </br></br>
+        <button type="submit">SUBMIT</button>
+    </div>
+</form>
+<% } %> 
+
+
+<% if(flag==true) {%>
+    <% data.forEach(function(each) {%>
+        <span> <%= each.Country.EnglishName %>,
+            <%= each.AdministrativeArea.EnglishName %>,
+            <% if(each.SupplementalAdminAreas.length>0){%> <%= each.SupplementalAdminAreas[0].EnglishName %>, <%}%>
+            <% if(each.SupplementalAdminAreas.length>1){%> <%= each.SupplementalAdminAreas[1].EnglishName %>, <%}%>
+            
+            <a href="/location?key=<%=each.Key%>&area=<%if(each.SupplementalAdminAreas.length>0){%><%=each.SupplementalAdminAreas[0].EnglishName%>,<%}%><%if(each.SupplementalAdminAreas.length>1){%><%=each.SupplementalAdminAreas[1].EnglishName%>,<%}%><%=each.AdministrativeArea.EnglishName%>,<%=each.Country.EnglishName%>">Select location</a>
+        </br>
+        </span>
+    <%}); 
+}%> 
